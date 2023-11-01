@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Conversao {
     String numero;
-    public int converterParaDecimal(String algarismo){
+    public static int converterParaDecimal(String algarismo){
         HashMap<Character, Integer> mapeamento = new HashMap<>();
 
         /**
@@ -31,12 +31,13 @@ public class Conversao {
                 //certo que é base 4, faço a subtração de 2 * 1 (do "I") do resultado. Corrigindo o valor para 4.
                 resultado += mapeamento.get(algarismo.charAt(i)) - 2 * mapeamento.get(algarismo.charAt(i - 1));
             }else {
-                //se chegar até aqui apenas adiciona o valor do algorismo ao resultado
+                //se chegar até aqui apenas adiciona o valor do algarismo ao resultado
                 resultado += mapeamento.get(algarismo.charAt(i));
             }
         }
         return resultado;
     }
+
 
     public String converterParaRomano(int numero) {
         if (numero <= 0 || numero > 3999) {
