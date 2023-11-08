@@ -18,4 +18,10 @@ public class TesteSoftware {
         assertEquals(16, Conversao.converterParaDecimal("XVI"));
         assertEquals(150, Conversao.converterParaDecimal("CL"));
     }
+     @Test
+    public void subtracaoDeValorMenor(){
+         assertEquals(4, Conversao.converterParaDecimal("IV"));
+         assertEquals(19, Conversao.converterParaDecimal("XIX"));
+         assertEquals(90, Conversao.converterParaDecimal("XC"));
+    }
 }

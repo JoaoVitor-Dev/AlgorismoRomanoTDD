@@ -3,10 +3,14 @@ package org.example;
 import java.util.HashMap;
 
 public class Conversao {
-    String numero;
+
+    /**
+     *
+     * @param
+     * @return int
+     */
     public static int converterParaDecimal(String algarismo){
         HashMap<Character, Integer> mapeamento = new HashMap<>();
-
         /**
          * Base 4
          * algarismo 0 não existe
@@ -38,10 +42,14 @@ public class Conversao {
         return resultado;
     }
 
-
+    /**
+     *
+     * @param numero
+     * @return
+     */
     public String converterParaRomano(int numero) {
         if (numero <= 0 || numero > 3999) {
-            System.out.println("O número deve estar no intervalo de 1 a 3999.");
+            System.out.println("O número deve estar entre 1 e 3999.");
         }
 
         String[] milhares = {"", "M", "MM", "MMM"};
