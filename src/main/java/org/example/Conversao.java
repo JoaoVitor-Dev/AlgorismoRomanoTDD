@@ -3,7 +3,6 @@ package org.example;
 import java.util.HashMap;
 
 public class Conversao {
-
     /**
      *
      * @param
@@ -39,6 +38,9 @@ public class Conversao {
                 resultado += mapeamento.get(algarismo.charAt(i));
             }
         }
+
+        System.out.println(resultado);
+
         return resultado;
     }
 
@@ -47,9 +49,10 @@ public class Conversao {
      * @param numero
      * @return
      */
-    public String converterParaRomano(int numero) {
+    public static String converterParaRomano(int numero) {
+
         if (numero <= 0 || numero > 3999) {
-            System.out.println("O número deve estar entre 1 e 3999.");
+            return "O número deve estar entre 1 e 3999.";
         }
 
         String[] milhares = {"", "M", "MM", "MMM"};
